@@ -1,4 +1,4 @@
-package com.mitiebh.pip
+package com.example.pip
 
 import android.app.PictureInPictureParams
 import android.graphics.Point
@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        
         val display:Display = windowManager.defaultDisplay
         val point = Point()
         val button = findViewById<Button>(R.id.btnPIP)
@@ -25,5 +26,7 @@ class MainActivity : AppCompatActivity() {
             pipParamBuilder.setAspectRatio(Rational(point.x,point.y)).build()
             enterPictureInPictureMode(pipParamBuilder.build())
         }
+        
     }
+    
 }
